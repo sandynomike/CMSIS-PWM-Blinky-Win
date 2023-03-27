@@ -40,10 +40,10 @@ int main( void ){
   GPIOA->CRL |= ( GPIO_CRL_CNF0_1 | GPIO_CRL_MODE0_1 );   // Set CNF0[1] and MODE0[1] bits.
 
   // Set TIM2 Frequency to 8000 (8 MHz clock / 8000 = 1 kHz output when there is no prescaler)
-  TIM2->ARR = 16000;
+  TIM2->ARR = 4000;
 
   // Set TIM2/CH3 Duty Cycle to 50% (50% of 8000 = 4000)
-  TIM2->CCR1 = 8000;
+  TIM2->CCR1 = 2000;
 
   // Set TIM2/CH3 to PWM Mode 1 (OC1M[2:0] = 0b110)
   TIM2->CCMR1 |=  ( TIM_CCMR1_OC1M_2 | TIM_CCMR1_OC1M_1 );

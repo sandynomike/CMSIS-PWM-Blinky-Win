@@ -18,8 +18,8 @@ CC = arm-none-eabi-gcc
 
 CFLAGS = -mcpu=cortex-m3 -g3 --specs=nano.specs -mthumb -mfloat-abi=soft -Wall
 
-INCLUDE1 = Drivers/CMSIS/DEVICE
-INCLUDE2 = Drivers/CMSIS/Include
+INCLUDE1 =STM32CubeF1/Drivers/CMSIS/Device/ST/STM32F1xx/Include
+INCLUDE2 =STM32CubeF1/Drivers/CMSIS/Include
 
 $(TARGET).elf: $(SOURCE).o $(STARTUP).o $(LOADER) Makefile
 	$(CC) -o $@ $(SOURCE).o $(STARTUP).o -mcpu=$(MCPU) --specs=nosys.specs -T"$(LOADER)" \
